@@ -1,0 +1,340 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cee8f0; /* темно-сірий фон */
+    color: rgb(0, 0, 0); /* білий текст для контрасту */
+}
+.navbar {
+    background-color: #468BA6;
+    overflow: hidden;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    font-weight: 400;
+    font-size: 25px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #2f4d58;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+label, input {
+    display: block;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+ul {
+    background-color: #44444400;
+    padding: 20px;
+    border-radius: 8px;
+}
+li {
+    margin-bottom: 10px;
+}
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flashes li {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.flashes li.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flashes li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flashes .error {
+    color: red;
+}
+
+.flashes .success {
+    color: green;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 300px; /* Змініть розмір, якщо потрібно */
+    margin-top: 5px;
+}
+.generated-password {
+    margin-top: 20px; /* Збільште відстань між кнопкою "Згенерувати" та згенерованим паролем */
+}
+
+.generated-password input[type="text"] {
+    width: 300px; /* Змініть розмір, якщо потрібно */
+}
+
+.flashes-header {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.flashes-header li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none; /* Впевніться, що немає border */
+    box-shadow: none;
+}
+
+.flashes-header li.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: none; /* Впевніться, що немає border */
+    box-shadow: none;
+}
+
+.flashes-header li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: none; /* Впевніться, що немає border */
+    box-shadow: none;
+}
+
+
+.index-main {
+    background-image: url('/static/images/my_image.jpg');
+    height: 646px;
+    max-width: 100%vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+
+/* === LOGIN PAGE ===*/
+
+.header {
+    margin-top: 20px;
+    margin-left: 120px;
+    color: #ffffff;
+    background-color: #468ba69a;
+    padding: 0 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    background-color: #468BA6;
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 8px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('/static/images/my_image.jpg');
+    height: 646px;
+    max-width: 100%vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-label {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.form-input {
+    border: none;
+    margin-bottom: 20px;
+    width: 300px;
+    padding-left: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.form-but {
+    width: 75px;
+    font-weight: 700;
+    background-color: #fff200;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* === REG PAGE ===*/
+
+.reg-header {
+    margin-left: 112px;
+    color: #ffffff;
+    background-color: #468ba69a;
+    padding: 0 10px;
+}
+
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    background-color: #468BA6;
+    padding: 20px;
+    padding-bottom: 35px;
+    border-radius: 8px;
+}
+
+.form-reg-but {
+    width: 150px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    background-color: #ffff14;
+}
+
+.generate-form {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background-color: #468BA6;
+    padding: 20px;
+    padding-bottom: 35px;
+    border-radius: 8px;
+}
+
+.check-box {
+    display: flex; 
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-first-group {
+    gap: 5px;
+}
+
+.generate-input {
+    color: #000000;
+    padding: 10px;
+    border: 4px solid #468BA6;
+    font-weight: 900;
+}
+
+.passord-header {
+    color: rgb(255, 255, 255);
+    background-color: #468ba69a;
+}
+
+.content-page {
+    display: flex;
+    gap: 15px;
+    padding-top: 40px;
+}
+
+.password-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+
+.table-set {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-title {
+    font-weight: 500;
+    color: #000;
+}
+
+.table-column {
+    font-weight: 400;
+    color: #000;
+}
+
+.table-div {
+    margin-left: 20px;
+    border: 4px solid #468BA6;
+    background-color: #fff;
+    width: 335px;
+    height: 260px;
+}
+
+.second-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.generator-content {
+    padding-top: 20px;
+}
+
+.gloobal-content {
+    width: 700px;
+    background-color: #468ba69a;
+    padding: 10px;
+}
+
+.global-second-title {
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 30;
+}
+
+.global-title {
+    color: #ffffff;
+    font-size: 45;
+    font-weight: 900;
+}

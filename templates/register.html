@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="{{ url_for('index') }}">Головна</a>
+        </div>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes-header">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </header>
+    <main class="section">
+        <div class="content">
+            <h1 class="reg-header">Sign up</h1>
+            <form class="reg-form" method="post">
+                <label class="form-label" for="username">Ім'я користувача:</label>
+                <input class="form-input" type="text" id="username" name="username" value="{{ form.username }}" placeholder="Enter your username" required>
+                {% if errors.username %}
+                    <span class="error">{{ errors.username }}</span>
+                {% endif %}
+
+                <label class="form-label" for="email">Електронна пошта:</label>
+                <input class="form-input" type="email" id="email" name="email" value="{{ form.email }}" placeholder="Enter your email" required>
+                {% if errors.email %}
+                    <span class="error">{{ errors.email }}</span>
+                {% endif %}
+
+                <label class="form-label" for="password">Пароль:</label>
+                <input class="form-input" type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <input class="form-reg-but" type="submit" value="Зареєструватися">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
